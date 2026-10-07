@@ -7,14 +7,6 @@ const schools = [
     gpa: '3.64',
     note: null as string | null,
   },
-  {
-    school: 'Liberty High School, Mountain View, MO',
-    shortSchool: 'Liberty High School',
-    degree: 'General Diploma',
-    dates: 'Aug 2021 – May 2025',
-    gpa: '3.99',
-    note: 'Summa Cum Laude',
-  },
 ]
 
 export function Education() {
