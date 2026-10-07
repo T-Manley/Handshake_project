@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Radio, ShieldCheck, Users } from 'lucide-react'
+import { withBasePath } from '@/lib/base-path'
 
 const items = [
   {
@@ -18,13 +19,13 @@ function RadioShow() {
   return (
     <div className="flex gap-4 rounded-xl border border-border bg-background/60 p-3 sm:p-4">
       <a
-        href="/images/second-dimension-flyer.png"
+        href={withBasePath('/images/second-dimension-flyer.png')}
         target="_blank"
         rel="noopener noreferrer"
         className="group relative block size-24 shrink-0 overflow-hidden rounded-lg ring-1 ring-border transition hover:ring-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:size-32"
       >
         <Image
-          src="/images/second-dimension-flyer.png"
+          src={withBasePath('/images/second-dimension-flyer.png')}
           alt="Flyer for The Second Dimension with DJ Prismo on KMNR, Tuesdays at 8"
           fill
           sizes="(min-width: 640px) 128px, 96px"
