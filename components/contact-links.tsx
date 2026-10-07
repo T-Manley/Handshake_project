@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, Phone } from 'lucide-react'
+import { ArrowUpRight, FolderGit2, Mail, MessageSquare } from 'lucide-react'
 import type { ReactNode } from 'react'
 
 type ContactLink = {
@@ -25,10 +25,10 @@ const contacts: ContactLink[] = [
     icon: <Mail className="size-4" aria-hidden="true" />,
   },
   {
-    label: 'Phone',
+    label: 'Text',
     value: '(417) 247-9737',
-    href: 'tel:+14172479737',
-    icon: <Phone className="size-4" aria-hidden="true" />,
+    href: 'sms:+14172479737',
+    icon: <MessageSquare className="size-4" aria-hidden="true" />,
   },
   {
     label: 'LinkedIn',
@@ -37,17 +37,24 @@ const contacts: ContactLink[] = [
     icon: <LinkedInMark />,
     external: true,
   },
+  {
+    label: 'GitHub',
+    value: 'github.com/T-Manley',
+    href: 'https://github.com/T-Manley',
+    icon: <FolderGit2 className="size-4" aria-hidden="true" />,
+    external: true,
+  },
 ]
 
 export function ContactLinks() {
   return (
-    <ul className="flex flex-col gap-2">
+    <ul className="grid gap-2 sm:grid-cols-2">
       {contacts.map((contact) => (
         <li key={contact.label}>
           <a
             href={contact.href}
             {...(contact.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-            className="group flex items-center gap-4 rounded-xl border border-border bg-background/60 px-4 py-3 transition-colors hover:border-primary/40 hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            className="group flex items-center gap-4 rounded-xl border border-border bg-background/60 px-4 py-3 transition-colors hover:border-primary/50 hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
           >
             <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
               {contact.icon}

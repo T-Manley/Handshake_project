@@ -32,27 +32,27 @@
   --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-/* Sage green accent on a neutral grey palette */
+/* Dark grey palette with a sage green accent */
 :root {
-  color-scheme: light;
-  --background: oklch(0.955 0.003 140);
-  --foreground: oklch(0.27 0.005 140);
-  --card: oklch(0.995 0.001 140);
-  --card-foreground: oklch(0.27 0.005 140);
-  --popover: oklch(0.995 0.001 140);
-  --popover-foreground: oklch(0.27 0.005 140);
-  --primary: oklch(0.52 0.06 145);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.93 0.004 140);
-  --secondary-foreground: oklch(0.32 0.005 140);
-  --muted: oklch(0.94 0.003 140);
-  --muted-foreground: oklch(0.5 0.006 140);
-  --accent: oklch(0.93 0.025 145);
-  --accent-foreground: oklch(0.38 0.05 145);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.89 0.004 140);
-  --input: oklch(0.89 0.004 140);
-  --ring: oklch(0.62 0.06 145);
+  color-scheme: dark;
+  --background: oklch(0.165 0.004 150);
+  --foreground: oklch(0.94 0.004 140);
+  --card: oklch(0.205 0.005 150);
+  --card-foreground: oklch(0.94 0.004 140);
+  --popover: oklch(0.205 0.005 150);
+  --popover-foreground: oklch(0.94 0.004 140);
+  --primary: oklch(0.76 0.07 145);
+  --primary-foreground: oklch(0.18 0.012 145);
+  --secondary: oklch(0.25 0.005 150);
+  --secondary-foreground: oklch(0.88 0.004 140);
+  --muted: oklch(0.24 0.005 150);
+  --muted-foreground: oklch(0.68 0.006 140);
+  --accent: oklch(0.28 0.03 145);
+  --accent-foreground: oklch(0.84 0.06 145);
+  --destructive: oklch(0.65 0.2 25);
+  --border: oklch(0.29 0.005 150);
+  --input: oklch(0.29 0.005 150);
+  --ring: oklch(0.7 0.07 145);
   --radius: 0.75rem;
 }
 

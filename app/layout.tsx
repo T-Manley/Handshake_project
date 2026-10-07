@@ -17,7 +17,7 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: 'Taylor Manley — Computer Engineering Student at Missouri S&T',
   description:
-    'Taylor Manley is a Computer Engineering student at Missouri S&T, involved with KMNR college radio and serving as GIC Chair for Delta Omicron Lambda.',
+    'Taylor Manley is a Computer Engineering student at Missouri S&T. Projects include SkyWalks (PickHacks 2026), a Flask budget tracker, and a Python to-do app. Involved with KMNR and GIC Chair for Delta Omicron Lambda.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light',
-  themeColor: '#f1f2f0',
+  colorScheme: 'dark',
+  themeColor: '#121413',
 }
 
 export default function RootLayout({
