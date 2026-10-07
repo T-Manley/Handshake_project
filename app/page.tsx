@@ -1,7 +1,10 @@
 import { ArrowUpRight, GraduationCap } from 'lucide-react'
 import { ContactLinks } from '@/components/contact-links'
+import { Education } from '@/components/education'
+import { Experience } from '@/components/experience'
 import { Involvement } from '@/components/involvement'
 import { Projects } from '@/components/projects'
+import { Skills } from '@/components/skills'
 
 function SectionHeading({ id, children }: { id: string; children: React.ReactNode }) {
   return (
@@ -48,6 +51,11 @@ export default function Page() {
             <ContactLinks variant="compact" />
           </section>
 
+          <section aria-labelledby="education-heading" className="flex flex-col gap-4">
+            <SectionHeading id="education-heading">Education</SectionHeading>
+            <Education />
+          </section>
+
           <section aria-labelledby="projects-heading" className="flex flex-col gap-4">
             <div className="flex items-center justify-between gap-4">
               <SectionHeading id="projects-heading">Projects</SectionHeading>
@@ -69,6 +77,16 @@ export default function Page() {
           <section aria-labelledby="involvement-heading" className="flex flex-col gap-4">
             <SectionHeading id="involvement-heading">Involved with</SectionHeading>
             <Involvement />
+          </section>
+
+          <section aria-labelledby="experience-heading" className="flex flex-col gap-4">
+            <SectionHeading id="experience-heading">Experience</SectionHeading>
+            <Experience />
+          </section>
+
+          <section aria-labelledby="skills-heading" className="flex flex-col gap-4">
+            <SectionHeading id="skills-heading">Skills</SectionHeading>
+            <Skills />
           </section>
 
           <section aria-labelledby="contact-heading" className="hidden flex-col gap-4 sm:flex">
