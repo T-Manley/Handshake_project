@@ -9,6 +9,7 @@ type ProjectLink = {
 type Project = {
   eyebrow: string
   title: string
+  summary: string
   description: string
   tech: string[]
   links: ProjectLink[]
@@ -20,6 +21,7 @@ const projects: Project[] = [
   {
     eyebrow: 'PickHacks 2026 · Hackathon',
     title: 'SkyWalks',
+    summary: 'Automated canopy-covered skybridges that react to sun and weather.',
     description:
       'An automated canopy-covered skybridge system: open-air skybridges with reactive sun/weather coverage and illumination. Includes formal and bulleted write-ups of the full idea plus sample code for the inputs driving the automated canopy.',
     tech: ['Arduino', 'C++'],
@@ -35,6 +37,7 @@ const projects: Project[] = [
   {
     eyebrow: 'Web App',
     title: 'Budget Tracker',
+    summary: 'Flask + SQLite expense tracker with monthly filters and a category donut chart.',
     description:
       'A Flask budgeting app backed by SQLite. Add, delete, and view expenses, filter by month, and see totals with a category breakdown visualized in an animated donut chart.',
     tech: ['Python', 'Flask', 'SQLite'],
@@ -43,6 +46,7 @@ const projects: Project[] = [
   {
     eyebrow: 'Command-Line App',
     title: 'To-Do List',
+    summary: 'Command-line task manager with due dates and file save/load.',
     description:
       'A command-line to-do app for managing tasks with due dates: add, view, complete, and delete tasks, with save and load to a local file.',
     tech: ['Python'],
@@ -56,19 +60,22 @@ export function Projects() {
       {projects.map((project) => (
         <li
           key={project.title}
-          className="flex flex-col gap-4 rounded-xl border border-border bg-background/60 p-5 transition-colors hover:border-primary/40"
+          className="flex flex-col gap-3 rounded-xl border border-border bg-background/60 p-4 transition-colors hover:border-primary/40 sm:gap-4 sm:p-5"
         >
           <div className="flex flex-col gap-1.5">
-            <span className="text-xs font-medium uppercase tracking-wider text-primary">
+            <span className="text-[11px] font-medium uppercase tracking-wider text-primary sm:text-xs">
               {project.eyebrow}
             </span>
-            <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground text-pretty">
+            <h3 className="text-base font-semibold text-foreground sm:text-lg">{project.title}</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground text-pretty sm:hidden">
+              {project.summary}
+            </p>
+            <p className="hidden text-sm leading-relaxed text-muted-foreground text-pretty sm:block">
               {project.description}
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
             <ul className="flex flex-wrap gap-1.5" aria-label={`${project.title} technologies`}>
               {project.tech.map((t) => (
                 <li
@@ -92,7 +99,14 @@ export function Projects() {
                     className="group inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-sm text-foreground transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                   >
                     <Icon className="size-3.5" aria-hidden="true" />
-                    {link.label}
+                    {link.kind === 'doc' ? (
+                      <>
+                        <span className="sm:hidden">Write-up</span>
+                        <span className="hidden sm:inline">{link.label}</span>
+                      </>
+                    ) : (
+                      link.label
+                    )}
                     <ArrowUpRight className="size-3.5 opacity-60" aria-hidden="true" />
                     <span className="sr-only">for {project.title} (opens in a new tab)</span>
                   </a>

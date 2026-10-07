@@ -46,7 +46,29 @@ const contacts: ContactLink[] = [
   },
 ]
 
-export function ContactLinks() {
+export function ContactLinks({ variant = 'full' }: { variant?: 'full' | 'compact' }) {
+  if (variant === 'compact') {
+    return (
+      <ul className="grid grid-cols-4 gap-2">
+        {contacts.map((contact) => (
+          <li key={contact.label}>
+            <a
+              href={contact.href}
+              {...(contact.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              aria-label={`${contact.label}: ${contact.value}${contact.external ? ' (opens in a new tab)' : ''}`}
+              className="flex flex-col items-center gap-1.5 rounded-xl border border-border bg-background/60 py-3 text-foreground transition-colors active:bg-accent hover:border-primary/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            >
+              <span className="flex size-9 items-center justify-center rounded-lg bg-accent text-accent-foreground">
+                {contact.icon}
+              </span>
+              <span className="text-[11px] font-medium text-muted-foreground">{contact.label}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
   return (
     <ul className="grid gap-2 sm:grid-cols-2">
       {contacts.map((contact) => (
