@@ -17,7 +17,7 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: 'Taylor Manley — Computer Engineering Student at Missouri S&T',
   description:
-    'Taylor Manley is a Computer Engineering student at Missouri S&T. Projects include SkyWalks (PickHacks 2026), a Flask budget tracker, and a Python to-do app. Involved with KMNR and GIC Chair for Delta Omicron Lambda.',
+    'Taylor Manley is a Computer Engineering student at Missouri S&T. Projects include SkyWalks (PickHacks 2026), a Flask budget tracker, and a Python to-do app. Involved with KMNR, Programming Chair for the Greek Independent Council, and GIC Chair for Delta Omicron Lambda.',
   generator: 'v0.app',
   icons: {
     icon: [
