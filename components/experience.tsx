@@ -36,7 +36,7 @@ const roles: Role[] = [
     role: 'Laborer',
     org: 'Robert’s Hardwood Flooring',
     location: 'Mountain View, MO',
-    dates: 'Sep 2023 – Present',
+    dates: 'Sep 2023 – Aug 2026',
     summary: 'Quality control and grading on the production floor.',
     bullets: [
       'Graded flooring by quality (selects, com 1&2’s), managed recuts, and quality control before packaging',
