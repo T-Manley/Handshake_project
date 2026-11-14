@@ -8,6 +8,11 @@ const items = [
     detail: 'Delta Omicron Lambda (DOL)',
   },
   {
+    icon: Users,
+    title: 'Programming Chair (Executive Board)',
+    detail: 'Greek Independent Council (GIC)',
+  },
+  {
     icon: ShieldCheck,
     title: 'ACM Security',
     detail: 'Missouri S&T',
